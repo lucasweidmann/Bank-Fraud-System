@@ -1,0 +1,60 @@
+# Build results
+bin/
+obj/
+out/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / VSCode
+.idea/
+.vscode/
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+.nuget/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test results
+TestResults/
+
+# Publish
+publish/
+
+# Entity Framework
+*.dbmdl
+
+# Rider
+*.sln.iml
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Azure
+.azure/
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Secrets
+secrets.json
+appsettings.Development.json
+
+# Temporary files
+*.tmp
+*.temp
