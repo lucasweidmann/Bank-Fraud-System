@@ -45,6 +45,10 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ITransactionService, TransactionService>();
+builder.Services.AddScoped<FraudDetectionEngine>();
+
+builder.Services.AddSignalR();
 
 builder.Services.AddDbContext<BankDbContext>(opts =>
     opts.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -106,5 +110,6 @@ app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.MapHub<BankFraudSystem.Hubs.BankHub>("/hubs/bank");
 
 app.Run();
